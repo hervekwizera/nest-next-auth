@@ -10,4 +10,12 @@ export class UserService {
     return 'This action adds a new user';
   }
 
+  async findByEmail(email:string){
+    this.prisma.user.findUnique({
+      where: {
+        email,
+      },
+    });
+  }
+
 }
