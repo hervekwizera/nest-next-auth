@@ -1,9 +1,11 @@
 import { Injectable } from '@nestjs/common';
-
+import { CreateUserDto } from "../user/dto/create-user.dto";
+import { UserService } from 'src/user/user.service';
 
 @Injectable()
 export class AuthService {
-    registerUser(){
-        throw new Error('Method not implemented.');
+    constructor(private  readonly userService: UserService){}
+    registerUser(createUserDto: CreateUserDto){
+        const user =
     }
 }
